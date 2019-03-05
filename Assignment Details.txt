@@ -1,0 +1,9 @@
+COM 260 Programming Assignment
+Below are 3 variations of the programming assignment for designing a Caesar Cipher Encoder/Decoder
+They  have 3 levels of difficult from easy to challenging.  ( more credit will be given for the more difficult ones.  Choose one!
+You may use any common programming language that I can run to test you program ( Java, VB, python, C++, etc. )  The input and output may be either graphical or text based. The final program should be well documented ( including your name, an explanation of the algorithm, how to use it – if not obvious, etc.) and should be put into your folder on the server drive.
+Assignment
+1. Implement an algorithm that generates a Caesar shift cipher. The input to you program is text ( or a string) to be encoded, ending with the special character “$”.  Also input the value k, representing the key shift. (Ignore case) The output is the encoded text.  ( Based on question #21 in the COM 200 text, Invitation to Computer Science.)
+2. Implement an algorithm that implements a Caesar substitution cipher in which ever letter of the alphabet is represented by another letter ( ignore case).  The input to you program is text ( or a string) to be encoded, ending with the special character. The output is the encoded text. ( Hint: you might want to use two parallel arrays.)
+3. See page 44 of your textbook , question 12. Implement a decoder to help an analyst decrypt a simple substitution cipher. Your program should take the cipher text as input, compute the letter frequencies, and display the frequency counts. The program should allow the analyst (or user) to guess a key and display the results of the corresponding “decryption”.
+4. If you have a similar idea that you would rather work on – let me know and design that one….

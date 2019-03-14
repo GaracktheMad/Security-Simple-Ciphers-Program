@@ -1,5 +1,19 @@
 package model;
 
+/**
+ * @author Peter Vukas Used to distinguish types of some exceptions.
+ */
 public enum Identifier {
-BAD_KEY_INT, BAD_TEXT_INVALID_CHARACTER, BAD_KEY_IMPROPER_ALPHABET;
+	/**
+	 * Key is not in integer format
+	 */
+	BAD_KEY_INT,
+	/**
+	 * Cipher/Plain text uses non-alphabetic characters
+	 */
+	BAD_TEXT_INVALID_CHARACTER,
+	/**
+	 * Key uses more letters or incorrect characters associated with an alphabet
+	 */
+	BAD_KEY_IMPROPER_ALPHABET;
 }

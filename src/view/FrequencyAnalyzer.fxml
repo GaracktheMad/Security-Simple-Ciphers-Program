@@ -3,12 +3,13 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<fx:root type="BorderPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FrequencyAnalyzerController">
    <left>
       <VBox spacing="10.0" BorderPane.alignment="CENTER">
          <children>
@@ -16,14 +17,14 @@
             <HBox>
                <children>
                   <TextField fx:id="cipherTxt" />
-                  <Button fx:id="analyzeField" mnemonicParsing="false" onAction="#analyze" text="Analyze" />
+                  <Button fx:id="analyzeBtn" mnemonicParsing="false" text="Analyze" />
                </children>
             </HBox>
             <Label text="Key Guess:" />
             <HBox>
                <children>
                   <TextField fx:id="decryptKey" />
-                  <Button fx:id="decryptBtn" mnemonicParsing="false" onAction="#decryptAttempt" text="Decrypt" />
+                  <Button fx:id="decryptBtn" mnemonicParsing="false" text="Decrypt" />
                </children>
             </HBox>
             <Label text="Result:" />
@@ -35,9 +36,14 @@
       </VBox>
    </left>
    <right>
-      <VBox fx:id="labelBox" BorderPane.alignment="CENTER">
-         <padding>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-         </padding></VBox>
+      <ScrollPane BorderPane.alignment="CENTER_RIGHT">
+         <content>
+            <VBox fx:id="labelBox" prefWidth="100.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
    </right>
-</fx:root>
+</BorderPane>

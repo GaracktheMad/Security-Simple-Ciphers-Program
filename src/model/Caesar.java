@@ -1,7 +1,13 @@
 package model;
 
+/**
+ * @author Peter Vukas Encrypts and Decrypts text via the
+ */
 public class Caesar implements Decrypt, Encrypt, UsesAlphabet {
-	private static char[] alpha = new char[26];
+	/**
+	 * Temporary shifted alphabet
+	 */
+	private char[] alpha = new char[26];
 
 	@Override
 	public String encrypt(String plainText, String key) throws InvalidTextException, InvalidKeyException {
@@ -34,6 +40,11 @@ public class Caesar implements Decrypt, Encrypt, UsesAlphabet {
 		return new String(ciphertxt);
 	}
 
+	/**
+	 * Creates a shifted alphabet stored in "Alpha"
+	 * 
+	 * @param shift The integer value of the shifted alphabet
+	 */
 	private void shiftAlphabet(int shift) {
 		int realShift = 0;
 		if (shift >= 26) {
@@ -46,7 +57,7 @@ public class Caesar implements Decrypt, Encrypt, UsesAlphabet {
 		int shifty = 0;
 		for (int i = 0; i < staticAlphabet.length; i++) {
 			shifty = realShift + i;
-			if (shift >= alpha.length) {
+			if (shifty >= alpha.length) {
 				shifty = shifty - alpha.length;
 			}
 			alpha[shifty] = staticAlphabet[i];
